@@ -35,7 +35,7 @@ http
             <th scope="col">Nombre Contacto</th>`);
             let body = '';
             for (let i = 0; i < proveedores.length; i++) {
-                body += 
+                body +=
                 `<tr>
                     <th scope="row">${proveedores[i].idproveedor}</th>
                     <td>${proveedores[i].nombrecompania}</td>
@@ -55,7 +55,7 @@ http
             <th scope="col">Nombre Contacto</th>`);
             let body = '';
             for (let i = 0; i < clientes.length; i++) {
-                body += 
+                body +=
                 `<tr>
                     <th scope="row">${clientes[i].idCliente}</th>
                     <td>${clientes[i].NombreCompania}</td>
@@ -68,6 +68,6 @@ http
             fs.createReadStream('tablaClientes.html').pipe(res)
             fs.unlinkSync('tablaClientes.html')
         }
-        res.end('Modifique la url')
+        //res.end('Modifique la url')
     })
     .listen(8081);
